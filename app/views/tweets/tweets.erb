@@ -1,3 +1,19 @@
 <p>Welcome, <%= current_user.username%> </p> 
 
-<a href="/logout">Logout</a>
+    <a href="/tweets/new">
+    <br>
+    <button>Create a new Post</button>
+    </a>
+    
+    <h4>Your Tweets ⬇️</h4>
+
+    <% @tweets.each do |tweet|%>
+    <div>
+        <li><%= tweet.content %></li>
+    </div>
+    <% end %>
+
+    <br><br>
+<a href="/logout">
+    <button>Logout</button>
+</a>
